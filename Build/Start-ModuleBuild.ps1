@@ -31,10 +31,10 @@ $params = @{
   UnversionedOutputDirectory = $true
 }
 Build-Module @params
-$path = (Get-Module -ListAvailable "UGDSB.PS.AppLocker" | Where-Object {$_.Path -like "*$($global:Version)*"}).path
-if($path){
-  $directory = (Get-Item $Path).DirectoryName
-  $copyFrom = $moduleDir
-  $filesToCopy = Get-ChildItem -Path $copyFrom -recurse -Filter "*PS.AppLocker.ps*"
-  $filesToCopy | Copy-Item -Destination $directory -Force
-}
+#$path = (Get-Module -ListAvailable "UGDSB.PS.AppLocker" | Where-Object {$_.Path -like "*$($global:Version)*"}).path
+#if($path){
+#  $directory = (Get-Item $Path).DirectoryName
+#  $copyFrom = $moduleDir
+#  $filesToCopy = Get-ChildItem -Path $copyFrom -recurse -Filter "*PS.AppLocker.ps*"
+#  $filesToCopy | Copy-Item -Destination $directory -Force
+#}
